@@ -3,11 +3,29 @@ package tads.eaj.ufrn.segundaprovacontatos.ui.dashboard
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import tads.eaj.ufrn.segundaprovacontatos.model.Contact
+import tads.eaj.ufrn.segundaprovacontatos.repository.ContactRepository
+import javax.inject.Inject
 
-class DashboardViewModel : ViewModel() {
+@HiltViewModel
+class DashboardViewModel @Inject constructor(var repository: ContactRepository) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+    var contact = MutableLiveData<Contact>()
+
+    init {
+        contact.value = Contact("", "", "", "", true, "", "")
     }
-    val text: LiveData<String> = _text
+
+    fun cadastrarButtonEvent(){
+        viewModelScope.launch {
+            withContext(Dispatchers.IO){
+                contact.value?.let { repository.create(it) }
+            }
+        }
+    }
 }

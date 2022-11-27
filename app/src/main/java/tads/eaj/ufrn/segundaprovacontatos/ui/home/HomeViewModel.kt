@@ -1,13 +1,13 @@
 package tads.eaj.ufrn.segundaprovacontatos.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import dagger.hilt.android.lifecycle.HiltViewModel
+import tads.eaj.ufrn.segundaprovacontatos.repository.ContactRepository
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel  @Inject constructor(private var repository: ContactRepository) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+    var contacts = repository.listAll().asLiveData()
 }
