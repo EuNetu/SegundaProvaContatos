@@ -13,6 +13,8 @@ interface ContactDao {
     @Query("SELECT * FROM contact where id=:id")
     fun findById(id:Long):Contact?
 
+    //@Query("DELETE FROM contact")
+
     @Delete
     fun delete(c:Contact)
 
