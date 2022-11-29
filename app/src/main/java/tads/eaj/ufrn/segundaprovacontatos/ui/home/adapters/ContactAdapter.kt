@@ -23,10 +23,12 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
     class ContactViewHolder private constructor(var binding: ContactItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(contact: Contact) {
-            binding.textViewNomeRemedio.text = contact.firstName
-            binding.textViewDosagemRemedio.text = contact.lastName
+            binding.textName.text = contact.firstName
+            binding.textLastname.text = contact.lastName
+            binding.textAddress.text = contact.address
+            binding.textMainPhone.text = contact.mainPhone
 
-            binding.textViewNomeRemedio.setOnClickListener {
+            binding.textName.setOnClickListener {
                 Toast.makeText(binding.root.context, "CLicou no texto", Toast.LENGTH_SHORT).show()
             }
         }
