@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="tads.eaj.ufrn.segundaprovacontatos.ui.dashboard.DashboardViewModel" />
+            type="tads.eaj.ufrn.segundaprovacontatos.ui.dashboard.CadastraViewModel" />
     </data>
 
     <ScrollView
@@ -18,7 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.dashboard.DashboardFragment">
+            tools:context=".ui.dashboard.CadastraFragment">
 
 
             <com.google.android.material.textfield.TextInputLayout
