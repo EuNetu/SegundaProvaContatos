@@ -32,7 +32,7 @@
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Euclides" />
+                tools:text="Camilla" />
 
             <TextView
                 android:id="@+id/textLastname"
@@ -48,7 +48,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textName"
                 app:layout_constraintTop_toTopOf="@+id/textName"
                 app:layout_constraintVertical_bias="0.0"
-                tools:text="Neto" />
+                tools:text="Falcão" />
 
             <TextView
                 android:id="@+id/textAddress"
@@ -65,6 +65,18 @@
                 tools:text="Rua Parque da Lagoa, 25" />
 
             <TextView
+                android:id="@+id/textRelationship"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_alternates_thin"
+                android:maxLines="1"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Namorada" />
+
+            <TextView
                 android:id="@+id/textMainPhone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -76,7 +88,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/textName"
                 app:layout_constraintTop_toBottomOf="@id/textAddress"
-                tools:text="(84)998745721" />
+                tools:text="(84)995758525" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>

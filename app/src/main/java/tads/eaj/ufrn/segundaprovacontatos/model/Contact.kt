@@ -7,11 +7,11 @@ import androidx.room.PrimaryKey
 data class Contact(
     var firstName: String,
     var lastName: String,
-    var address: String,
+    var street: String,
+    var numberHouse: Float,
     var relationship: String,
-    var national: Boolean,
-    var mainPhone: String,
-    var secondPhone: String
+    var Phone: String,
+    var areaCode: Int
 ){
     @PrimaryKey(autoGenerate = true)
     var id:Long = 0

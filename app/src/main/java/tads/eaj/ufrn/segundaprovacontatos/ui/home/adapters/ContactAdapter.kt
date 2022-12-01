@@ -25,8 +25,8 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
         fun bind(contact: Contact) {
             binding.textName.text = contact.firstName
             binding.textLastname.text = contact.lastName
-            binding.textAddress.text = contact.address
-            binding.textMainPhone.text = contact.mainPhone
+            binding.textAddress.text = contact.street
+            binding.textMainPhone.text = contact.Phone
 
             binding.textName.setOnClickListener {
                 Toast.makeText(binding.root.context, "CLicou no texto", Toast.LENGTH_SHORT).show()
