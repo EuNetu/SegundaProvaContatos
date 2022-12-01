@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import tads.eaj.ufrn.segundaprovacontatos.dao.ContactDao
 import tads.eaj.ufrn.segundaprovacontatos.model.Contact
 
-@Database(entities = [Contact::class], version = 2, exportSchema = false)
+@Database(entities = [Contact::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun contactDao():ContactDao
 

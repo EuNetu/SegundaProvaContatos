@@ -7,7 +7,8 @@
     <data>
         <variable
             name="viewmodel"
-            type="tads.eaj.ufrn.segundaprovacontatos.ui.dashboard.CadastraViewModel" />
+            type="tads.eaj.ufrn.segundaprovacontatos.ui.Cadastra.CadastraViewModel" />
+        <import type="tads.eaj.ufrn.remedioapp.ui.converters.DataBindingConverters"/>
     </data>
 
     <ScrollView
@@ -18,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.dashboard.CadastraFragment">
+            tools:context=".ui.Cadastra.CadastraFragment">
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -38,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Nome"
                     android:text="@={viewmodel.contact.firstName}"
-                    android:inputType="text" />
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -57,11 +58,11 @@
                     android:layout_height="wrap_content"
                     android:hint="Sobrenome"
                     android:text="@={viewmodel.contact.lastName}"
-                    android:inputType="text" />
+                    android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextAddress"
+                android:id="@+id/editTextStreet"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -71,31 +72,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextLastname">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editAddress"
+                    android:id="@+id/editStreet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Endereço"
+                    android:hint="Rua"
                     android:text="@={viewmodel.contact.street}"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextrelationship"
+                android:id="@+id/editTextNumberHouse"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextAddress">
+                app:layout_constraintTop_toBottomOf="@+id/editTextStreet">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editRelationship"
+                    android:id="@+id/editNumberHouse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@={viewmodel.contact.relationship}"
-                    android:hint="Parentesco"
-                    android:inputType="numberDecimal" />
+                    android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}"
+                    android:hint="Número da casa"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -106,7 +107,7 @@
                 android:layout_margin="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextrelationship">
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumberHouse">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editMainPhone"
@@ -114,11 +115,11 @@
                     android:layout_height="wrap_content"
                     android:hint="Telefone Primário"
                     android:text="@={viewmodel.contact.phone}"
-                    android:inputType="numberDecimal" />
+                    android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editTextSecondPhone"
+                android:id="@+id/editTextAreaCode"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -128,36 +129,44 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextMainPhone">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editSecondPhone"
+                    android:id="@+id/editAreaCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefone Secundário"
-                    android:text="@={viewmodel.contact.areaCode}"
+                    android:hint="Código de área"
+                    android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <CheckBox
-                android:id="@+id/checkBox"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTextRelationship"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Brasileiro(a)"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextSecondPhone" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextAreaCode">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editRelationship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Este contato é o seu..."
+                    android:text="@={viewmodel.contact.relationship}"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
-                android:id="@+id/activity_formulario_produto_botao_salvar"
+                android:id="@+id/buttonCadastra"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:layout_marginTop="60dp"
-                android:onClick="@{ () -> viewmodel.cadastrarButtonEvent()}"
+                android:layout_marginTop="32dp"
                 android:text="Salvar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextRelationship" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

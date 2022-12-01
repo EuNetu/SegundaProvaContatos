@@ -16,8 +16,8 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
     }
 
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
-        val remedio = getItem(position)
-        holder.bind(remedio)
+        val contact = getItem(position)
+        holder.bind(contact)
     }
 
     class ContactViewHolder private constructor(var binding: ContactItemBinding) : RecyclerView.ViewHolder(binding.root){
@@ -25,8 +25,11 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
         fun bind(contact: Contact) {
             binding.textName.text = contact.firstName
             binding.textLastname.text = contact.lastName
-            binding.textAddress.text = contact.street
-            binding.textMainPhone.text = contact.Phone
+            binding.textStreet.text = contact.street
+            binding.textNumberHouse.text = contact.numberHouse.toString()
+            binding.textPhone.text = contact.phone
+            binding.textAreaCode.text = contact.areaCode.toString()
+            binding.textRelationship.text = contact.relationship
 
             binding.textName.setOnClickListener {
                 Toast.makeText(binding.root.context, "CLicou no texto", Toast.LENGTH_SHORT).show()

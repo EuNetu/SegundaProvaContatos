@@ -5,15 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-<variable
-    name="viewmodel"
-    type="tads.eaj.ufrn.segundaprovacontatos.ui.home.HomeViewModel" />
+
+        <variable
+            name="viewmodel"
+            type="tads.eaj.ufrn.segundaprovacontatos.ui.home.HomeViewModel" />
     </data>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
-        tools:listitem="@layout/contact_item"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/contact_item" />
 </layout>

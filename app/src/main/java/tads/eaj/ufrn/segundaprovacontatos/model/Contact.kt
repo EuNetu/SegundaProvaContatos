@@ -10,7 +10,7 @@ data class Contact(
     var street: String,
     var numberHouse: Float,
     var relationship: String,
-    var Phone: String,
+    var phone: String,
     var areaCode: Int
 ){
     @PrimaryKey(autoGenerate = true)

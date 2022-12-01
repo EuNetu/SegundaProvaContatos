@@ -1,4 +1,4 @@
-package tads.eaj.ufrn.segundaprovacontatos.ui.dashboard
+package tads.eaj.ufrn.segundaprovacontatos.ui.Cadastra
 
 
 import androidx.lifecycle.MutableLiveData
@@ -18,7 +18,7 @@ class CadastraViewModel @Inject constructor(var repository: ContactRepository) :
     var contact = MutableLiveData<Contact>()
 
     init {
-        contact.value = Contact("", "", "", "", true, "", "")
+        contact.value = Contact("", "", "", 0f, "", "", 0)
     }
 
     fun cadastrarButtonEvent(){
