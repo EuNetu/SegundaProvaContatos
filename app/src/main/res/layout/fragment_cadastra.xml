@@ -7,8 +7,8 @@
     <data>
         <variable
             name="viewmodel"
-            type="tads.eaj.ufrn.segundaprovacontatos.ui.Cadastra.CadastraViewModel" />
-        <import type="tads.eaj.ufrn.remedioapp.ui.converters.DataBindingConverters"/>
+            type="tads.eaj.ufrn.segundaprovacontatos.ui.cadastra.CadastraViewModel" />
+        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters"/>
     </data>
 
     <ScrollView
@@ -19,7 +19,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.Cadastra.CadastraFragment">
+            tools:context=".ui.cadastra.CadastraFragment">
 
 
             <com.google.android.material.textfield.TextInputLayout

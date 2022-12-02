@@ -1,4 +1,4 @@
-package tads.eaj.ufrn.remedioapp.ui.converters
+package tads.eaj.ufrn.segundaprovacontatos.ui.converters
 
 import android.text.TextUtils
 import androidx.databinding.InverseMethod

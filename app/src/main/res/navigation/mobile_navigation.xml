@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_cadastra"
-        android:name="tads.eaj.ufrn.segundaprovacontatos.ui.Cadastra.CadastraFragment"
+        android:name="tads.eaj.ufrn.segundaprovacontatos.ui.cadastra.CadastraFragment"
         android:label="@string/title_Cadastra"
         tools:layout="@layout/fragment_cadastra" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="tads.eaj.ufrn.segundaprovacontatos.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_detalhes"
+        android:name="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.DetalhesFragment"
+        android:label="@string/title_detalhes"
+        tools:layout="@layout/fragment_detalhes" />
 </navigation>
