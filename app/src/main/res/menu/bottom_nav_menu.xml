@@ -10,10 +10,4 @@
         android:id="@+id/navigation_cadastra"
         android:icon="@drawable/ic_dashboard_black_24dp"
         android:title="@string/title_Cadastra" />
-
-    <item
-        android:id="@+id/navigation_detalhes"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_detalhes" />
-
 </menu>

@@ -13,4 +13,8 @@ class ContactRepository @Inject constructor(private var dao:ContactDao) : IConta
     override fun create(c: Contact) {
         dao.create(c)
     }
+
+    override fun findById(id:Long):Contact?{
+        return dao.findById(id)
+    }
 }
