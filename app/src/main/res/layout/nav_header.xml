@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView app:srcCompat="@drawable/ic_contatos"
+    <ImageView app:srcCompat="@drawable/ic_contatos_100"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_navigation_home_to_sobreFragment2"
             app:destination="@id/navigation_sobre" />
+        <action
+            android:id="@+id/action_navigation_home_to_alteraFragment"
+            app:destination="@id/alteraFragment" />
     </fragment>
 
     <fragment
@@ -37,4 +40,8 @@
         android:name="tads.eaj.ufrn.segundaprovacontatos.ui.menu.SobreFragment"
         android:label="fragment_sobre"
         tools:layout="@layout/fragment_sobre" />
+    <fragment
+        android:id="@+id/alteraFragment"
+        android:name="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.AlteraFragment"
+        android:label="AlteraFragment" />
 </navigation>

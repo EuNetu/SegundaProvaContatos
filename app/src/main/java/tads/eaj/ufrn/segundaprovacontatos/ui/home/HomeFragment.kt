@@ -46,14 +46,12 @@ class HomeFragment : Fragment() {
                     val bundle = Bundle();
                     bundle.putLong("id", adapter.getItemId(position))
                     Navigation.findNavController(view).navigate(R.id.navigation_detalhes, bundle)
-                    Toast.makeText(requireContext(), "Toque simples", Toast.LENGTH_SHORT).show()
                 }
 
                 override fun onItemLongClick(view: View, position: Int) {
                     val bundle = Bundle();
                     bundle.putLong("id", adapter.getItemId(position))
-                    Navigation.findNavController(view).navigate(R.id.navigation_detalhes, bundle)
-                    Toast.makeText(requireContext(), "Toque longo", Toast.LENGTH_SHORT).show()
+                    Navigation.findNavController(view).navigate(R.id.alteraFragment, bundle)
                 }
 
             }))

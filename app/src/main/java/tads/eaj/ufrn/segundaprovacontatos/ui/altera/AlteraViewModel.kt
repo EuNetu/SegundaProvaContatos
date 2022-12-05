@@ -25,4 +25,12 @@ class AlteraViewModel  @Inject constructor(private var repository: ContactReposi
             }
         }
     }
+
+    fun alteraButtonEvent(){
+        viewModelScope.launch {
+            withContext(Dispatchers.IO){
+                contact?.let { repository.update(it) }
+            }
+        }
+    }
 }

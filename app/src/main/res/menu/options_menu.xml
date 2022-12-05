@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:icon="@android:drawable/ic_menu_upload"
+        android:icon="@android:drawable/ic_menu_send"
         android:id="@+id/action_navigation_home_to_navigation_cadastra"
         android:title="Cadastra" />
 
@@ -12,6 +12,5 @@
         android:id="@+id/navigation_sobre"
         android:title="Sobre"
         app:showAsAction="always"/>
-
 
 </menu>

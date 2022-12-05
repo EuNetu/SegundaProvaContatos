@@ -34,10 +34,6 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
             binding.textPhone.text = contact.phone
             binding.textAreaCode.text = contact.areaCode.toString()
             binding.textRelationship.text = contact.relationship
-
-            binding.textName.setOnClickListener {
-                Toast.makeText(binding.root.context, "CLicou no texto", Toast.LENGTH_SHORT).show()
-            }
         }
 
         companion object {

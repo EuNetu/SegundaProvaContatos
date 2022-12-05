@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="tads.eaj.ufrn.segundaprovacontatos.ui.cadastra.CadastraViewModel" />
+            type="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.AlteraViewModel" />
         <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters"/>
     </data>
 
@@ -158,7 +158,7 @@
 
 
             <Button
-                android:id="@+id/buttonCadastra"
+                android:id="@+id/buttonAltera"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
