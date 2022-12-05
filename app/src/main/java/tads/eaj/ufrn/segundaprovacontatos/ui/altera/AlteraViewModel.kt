@@ -12,7 +12,7 @@ import tads.eaj.ufrn.segundaprovacontatos.ui.home.adapters.ContactAdapter
 import javax.inject.Inject
 
 @HiltViewModel
-class DetalhesViewModel  @Inject constructor(private var repository: ContactRepository) : ViewModel() {
+class AlteraViewModel  @Inject constructor(private var repository: ContactRepository) : ViewModel() {
     var contact:Contact? = null
 
     fun contatoSelecionado(id: Long){

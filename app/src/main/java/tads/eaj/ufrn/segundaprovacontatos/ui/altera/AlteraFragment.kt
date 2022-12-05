@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import tads.eaj.ufrn.segundaprovacontatos.databinding.FragmentDetalhesBinding
 
 @AndroidEntryPoint
-class DetalhesFragment : Fragment() {
+class AlteraFragment : Fragment() {
 
     private lateinit var _binding: FragmentDetalhesBinding
     private lateinit var _viewmodel: DetalhesViewModel

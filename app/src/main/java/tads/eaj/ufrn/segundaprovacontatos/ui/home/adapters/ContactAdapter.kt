@@ -20,6 +20,10 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
         holder.bind(contact)
     }
 
+    override fun getItemId(position: Int): Long {
+        return currentList[position].id
+    }
+
     class ContactViewHolder private constructor(var binding: ContactItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(contact: Contact) {
