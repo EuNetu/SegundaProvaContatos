@@ -13,7 +13,7 @@ import tads.eaj.ufrn.segundaprovacontatos.repository.ContactRepository
 import javax.inject.Inject
 
 @HiltViewModel
-class CadastraViewModel @Inject constructor(var repository: ContactRepository) : ViewModel(){
+class CadastraViewModel @Inject constructor(var repository: ContactRepository) : ViewModel() {
 
     var contact = MutableLiveData<Contact>()
 
@@ -21,9 +21,9 @@ class CadastraViewModel @Inject constructor(var repository: ContactRepository) :
         contact.value = Contact("", "", "", 0f, "", "", 0)
     }
 
-    fun cadastrarButtonEvent(){
+    fun cadastrarButtonEvent() {
         viewModelScope.launch {
-            withContext(Dispatchers.IO){
+            withContext(Dispatchers.IO) {
                 contact.value?.let { repository.create(it) }
             }
         }

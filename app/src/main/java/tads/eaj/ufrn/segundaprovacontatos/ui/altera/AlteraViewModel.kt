@@ -12,13 +12,13 @@ import tads.eaj.ufrn.segundaprovacontatos.ui.home.adapters.ContactAdapter
 import javax.inject.Inject
 
 @HiltViewModel
-class AlteraViewModel  @Inject constructor(private var repository: ContactRepository) : ViewModel() {
-    var contact:Contact? = null
+class AlteraViewModel @Inject constructor(private var repository: ContactRepository) : ViewModel() {
+    var contact: Contact? = null
 
-    fun contatoSelecionado(id: Long){
+    fun contatoSelecionado(id: Long) {
         Log.i("idContact", id.toString())
         viewModelScope.launch {
-            withContext(Dispatchers.IO){
+            withContext(Dispatchers.IO) {
                 id.let {
                     contact = repository.findById(it)
                 }
@@ -26,9 +26,9 @@ class AlteraViewModel  @Inject constructor(private var repository: ContactReposi
         }
     }
 
-    fun alteraButtonEvent(){
+    fun alteraButtonEvent() {
         viewModelScope.launch {
-            withContext(Dispatchers.IO){
+            withContext(Dispatchers.IO) {
                 contact?.let { repository.update(it) }
             }
         }

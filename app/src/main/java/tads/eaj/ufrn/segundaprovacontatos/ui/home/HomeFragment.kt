@@ -35,13 +35,13 @@ class HomeFragment : Fragment() {
 
         val adapter = ContactAdapter()
 
-        _viewmodel.contacts.observe(viewLifecycleOwner){
+        _viewmodel.contacts.observe(viewLifecycleOwner) {
             adapter.submitList(it)
         }
 
         _binding.recyclerview.adapter = adapter
         _binding.recyclerview.addOnItemTouchListener(
-            RecyclerView(_binding.recyclerview, object : RecyclerView.OnItemClickListener{
+            RecyclerView(_binding.recyclerview, object : RecyclerView.OnItemClickListener {
                 override fun onItemClick(view: View, position: Int) {
                     val bundle = Bundle();
                     bundle.putLong("id", adapter.getItemId(position))
@@ -54,7 +54,8 @@ class HomeFragment : Fragment() {
                     Navigation.findNavController(view).navigate(R.id.alteraFragment, bundle)
                 }
 
-            }))
+            })
+        )
 
         return _binding.root
     }

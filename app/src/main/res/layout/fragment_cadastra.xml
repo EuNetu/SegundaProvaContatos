@@ -37,7 +37,7 @@
                     android:id="@+id/editName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nome"
+                    android:hint="@string/nome"
                     android:text="@={viewmodel.contact.firstName}"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -56,7 +56,7 @@
                     android:id="@+id/editLastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Sobrenome"
+                    android:hint="@string/sobrenome"
                     android:text="@={viewmodel.contact.lastName}"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -75,7 +75,7 @@
                     android:id="@+id/editStreet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Rua"
+                    android:hint="@string/rua"
                     android:text="@={viewmodel.contact.street}"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}"
-                    android:hint="Número da casa"
+                    android:hint="@string/n_mero_da_casa"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,7 +113,7 @@
                     android:id="@+id/editMainPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefone Primário"
+                    android:hint="@string/telefone_prim_rio"
                     android:text="@={viewmodel.contact.phone}"
                     android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -132,7 +132,7 @@
                     android:id="@+id/editAreaCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Código de área"
+                    android:hint="@string/c_digo_de_rea"
                     android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}"
                     android:inputType="numberDecimal" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -151,7 +151,7 @@
                     android:id="@+id/editRelationship"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Este contato é o seu..."
+                    android:hint="@string/este_contato_o_seu"
                     android:text="@={viewmodel.contact.relationship}"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="32dp"
-                android:text="Salvar"
+                android:text="@string/salvar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextRelationship" />

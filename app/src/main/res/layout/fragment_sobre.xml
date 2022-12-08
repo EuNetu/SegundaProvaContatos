@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.DetalhesViewModel" />
-        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters"/>
+
+        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

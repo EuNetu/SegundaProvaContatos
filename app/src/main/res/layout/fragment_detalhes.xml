@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.DetalhesViewModel" />
-        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters"/>
+
+        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,11 +26,11 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_alternates_bold"
             android:maxLines="1"
+            android:text="@={viewmodel.contact.firstName}"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="@={viewmodel.contact.firstName}"
             tools:text="Camilla" />
 
         <TextView
@@ -39,13 +41,13 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_alternates_bold"
             android:maxLines="1"
+            android:text="@={viewmodel.contact.lastName}"
             android:textSize="36sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textName"
             app:layout_constraintStart_toEndOf="@+id/textName"
             app:layout_constraintTop_toTopOf="@+id/textName"
             app:layout_constraintVertical_bias="0.0"
-            android:text="@={viewmodel.contact.lastName}"
             tools:text="Falcão" />
 
         <TextView
@@ -55,11 +57,11 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_alternates"
             android:maxLines="1"
+            android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textStreet"
-            android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}"
             tools:text="18" />
 
         <TextView
@@ -70,11 +72,11 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_alternates"
             android:maxLines="1"
+            android:text="@={viewmodel.contact.street}"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textName"
-            android:text="@={viewmodel.contact.street}"
             tools:text="Rua Parque da Lagoa" />
 
         <TextView
@@ -85,12 +87,12 @@
             android:ellipsize="end"
             android:fontFamily="@font/montserrat_alternates_thin"
             android:maxLines="1"
+            android:text="@={viewmodel.contact.relationship}"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textPhone"
-            android:text="@={viewmodel.contact.relationship}"
             tools:text="Namorada" />
 
         <TextView
@@ -98,6 +100,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
+            android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -105,7 +108,6 @@
             app:layout_constraintEnd_toStartOf="@+id/textPhone"
             app:layout_constraintTop_toTopOf="@+id/textPhone"
             app:layout_constraintVertical_bias="0.0"
-            android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}"
             tools:text="(84)" />
 
         <TextView
@@ -113,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="76dp"
+            android:text="@={viewmodel.contact.phone}"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="40sp"
             android:textStyle="bold"
@@ -120,7 +123,6 @@
             app:layout_constraintHorizontal_bias="0.639"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textNumberHouse"
-            android:text="@={viewmodel.contact.phone}"
             tools:text="994159898" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

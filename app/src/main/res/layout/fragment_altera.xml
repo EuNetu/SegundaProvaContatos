@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
             type="tads.eaj.ufrn.segundaprovacontatos.ui.detalhes.AlteraViewModel" />
-        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters"/>
+
+        <import type="tads.eaj.ufrn.segundaprovacontatos.ui.converters.DataBindingConverters" />
     </data>
 
     <ScrollView
@@ -37,9 +39,9 @@
                     android:id="@+id/editName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Nome"
-                    android:text="@={viewmodel.contact.firstName}"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/nome"
+                    android:inputType="textPersonName"
+                    android:text="@={viewmodel.contact.firstName}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -56,9 +58,9 @@
                     android:id="@+id/editLastname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Sobrenome"
-                    android:text="@={viewmodel.contact.lastName}"
-                    android:inputType="textPersonName" />
+                    android:hint="@string/sobrenome"
+                    android:inputType="textPersonName"
+                    android:text="@={viewmodel.contact.lastName}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -75,9 +77,9 @@
                     android:id="@+id/editStreet"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Rua"
-                    android:text="@={viewmodel.contact.street}"
-                    android:inputType="text" />
+                    android:hint="@string/rua"
+                    android:inputType="text"
+                    android:text="@={viewmodel.contact.street}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -94,9 +96,9 @@
                     android:id="@+id/editNumberHouse"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}"
-                    android:hint="Número da casa"
-                    android:inputType="number" />
+                    android:hint="@string/n_mero_da_casa"
+                    android:inputType="number"
+                    android:text="@={DataBindingConverters.convertFloatToString(viewmodel.contact.numberHouse)}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -113,9 +115,9 @@
                     android:id="@+id/editMainPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Telefone Primário"
-                    android:text="@={viewmodel.contact.phone}"
-                    android:inputType="phone" />
+                    android:hint="@string/telefone_prim_rio"
+                    android:inputType="phone"
+                    android:text="@={viewmodel.contact.phone}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -132,9 +134,9 @@
                     android:id="@+id/editAreaCode"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Código de área"
-                    android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}"
-                    android:inputType="numberDecimal" />
+                    android:hint="@string/c_digo_de_rea"
+                    android:inputType="numberDecimal"
+                    android:text="@={DataBindingConverters.convertIntToString(viewmodel.contact.areaCode)}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -151,9 +153,9 @@
                     android:id="@+id/editRelationship"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Este contato é o seu..."
-                    android:text="@={viewmodel.contact.relationship}"
-                    android:inputType="text" />
+                    android:hint="@string/este_contato_o_seu"
+                    android:inputType="text"
+                    android:text="@={viewmodel.contact.relationship}" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -163,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:layout_marginTop="32dp"
-                android:text="Salvar"
+                android:text="@string/salvar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editTextRelationship" />

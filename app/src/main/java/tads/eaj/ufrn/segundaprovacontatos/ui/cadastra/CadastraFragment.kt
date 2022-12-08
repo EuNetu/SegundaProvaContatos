@@ -29,10 +29,14 @@ class CadastraFragment : Fragment() {
         _binding.viewmodel = _viewmodel
         _binding.lifecycleOwner = this
 
-        _binding.buttonCadastra.setOnClickListener{
+        _binding.buttonCadastra.setOnClickListener {
             _viewmodel.cadastrarButtonEvent()
             Navigation.findNavController(it).navigate(R.id.navigation_home)
-            Toast.makeText(requireContext(), "Sucesso! Seu contato foi cadastrado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.sucessoContatoCadastrado),
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         return _binding.root

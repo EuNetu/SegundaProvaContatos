@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import tads.eaj.ufrn.segundaprovacontatos.databinding.ContactItemBinding
 import tads.eaj.ufrn.segundaprovacontatos.model.Contact
 
-class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(ContactDiffUtilCallback()){
+class ContactAdapter :
+    ListAdapter<Contact, ContactAdapter.ContactViewHolder>(ContactDiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         return ContactViewHolder.from(parent)
@@ -24,7 +25,8 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
         return currentList[position].id
     }
 
-    class ContactViewHolder private constructor(var binding: ContactItemBinding) : RecyclerView.ViewHolder(binding.root){
+    class ContactViewHolder private constructor(var binding: ContactItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(contact: Contact) {
             binding.textName.text = contact.firstName
@@ -46,7 +48,7 @@ class ContactAdapter : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(Co
         }
     }
 
-    class ContactDiffUtilCallback : DiffUtil.ItemCallback<Contact>(){
+    class ContactDiffUtilCallback : DiffUtil.ItemCallback<Contact>() {
         override fun areItemsTheSame(oldItem: Contact, newItem: Contact): Boolean {
             return oldItem.id.equals(newItem.id)
         }

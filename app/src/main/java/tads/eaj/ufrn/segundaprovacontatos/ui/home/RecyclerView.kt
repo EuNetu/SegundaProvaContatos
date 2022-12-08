@@ -5,7 +5,8 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerView (view: RecyclerView, listener:OnItemClickListener) : RecyclerView.OnItemTouchListener {
+class RecyclerView(view: RecyclerView, listener: OnItemClickListener) :
+    RecyclerView.OnItemTouchListener {
 
     var gestureDetector: GestureDetector
 

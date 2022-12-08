@@ -16,11 +16,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         val navController = navHostFragment.navController
 
-        NavigationUI.setupActionBarWithNavController(this, navController, findViewById<DrawerLayout>(R.id.drawerLayout))
-        NavigationUI.setupWithNavController(findViewById<NavigationView>(R.id.navView), navController)
+        NavigationUI.setupActionBarWithNavController(
+            this,
+            navController,
+            findViewById<DrawerLayout>(R.id.drawerLayout)
+        )
+        NavigationUI.setupWithNavController(
+            findViewById<NavigationView>(R.id.navView),
+            navController
+        )
     }
 
     override fun onSupportNavigateUp(): Boolean {

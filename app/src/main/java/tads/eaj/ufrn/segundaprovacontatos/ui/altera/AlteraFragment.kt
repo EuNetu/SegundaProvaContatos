@@ -33,10 +33,14 @@ class AlteraFragment : Fragment() {
         val id = arguments?.getLong("id")
         _viewmodel.contatoSelecionado(id!!)
 
-        _binding.buttonAltera.setOnClickListener{
+        _binding.buttonAltera.setOnClickListener {
             _viewmodel.alteraButtonEvent()
             Navigation.findNavController(it).navigate(R.id.navigation_home)
-            Toast.makeText(requireContext(), "Sucesso! Seu contato foi alterado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                requireContext(),
+                getString(R.string.sucessoContatoAlterado),
+                Toast.LENGTH_SHORT
+            ).show()
         }
 
         return _binding.root
